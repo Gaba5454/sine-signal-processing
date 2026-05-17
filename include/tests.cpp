@@ -32,7 +32,7 @@ void WriteQuantizationResultToCsv(const std::string& filepath, double freq_hz, d
 
 
 
-double TestFloatQualityOfInterpolation(double freq, double fs, double num_samples) {
+double TestFloatQualityOfInterpolation(double freq, double fs, int num_samples) {
 
     // 1. Генератор синуса, на частоте которая задается вручную
     std::vector<double> signal = sine_generator(freq, fs, num_samples);
@@ -65,7 +65,7 @@ void WriteRedultsInterpolationToCsv(const std::string& filepath, double freq_hz,
     file.close();
 }
 
-    //     // 1. Генератор синуса, на частоте которая задается вручную
+    // // 1. Генератор синуса, на частоте которая задается вручную
     // std::vector<double> signal100 = sine_generator(freq_hz, fs_low, num_samples);
     // std::vector<double> signal200 = sine_generator(freq_hz, fs_high, num_samples2);
 
