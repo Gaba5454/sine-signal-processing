@@ -1,8 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <fstream>
 #include "sine_generator.h"
 #include "quantization.h"
 #include "interpolation.h"
 
-void run_test_interpolation(double freq_hz, double fs_low, double fs_high, double num_samples, double num_samples2);
+double TestFloatQuantizationNoise(double freq, double fs, int num_samples);
+void   WriteQuantizationResultToCsv(const std::string& filepath, double freq_hz, double error);
+
+double TestFloatQualityOfInterpolation(double freq, double fs, int num_samples);
+void   WriteRedultsInterpolationToCsv(const std::string& filepath, double freq_hz, double fs, double error);
