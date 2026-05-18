@@ -4,7 +4,7 @@
 
 
 ```bash
-# Соборка проекта
+# Сборка проекта
 mkdir build && cd build
 cmake ..
 make
