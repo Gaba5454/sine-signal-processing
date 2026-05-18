@@ -18,7 +18,7 @@ make
 --- 
 
 # Структура проекта 
-
+```bash
 sine-signal-processing/
     src/                       # Исходный код
         main.cpp               # Точка входа, запуск всех тестов
@@ -41,3 +41,4 @@ sine-signal-processing/
     README.md               # Описание проекта
     CMakeLists.txt          # Система сборки CMake
     gitignore               # Игнорируемые файлы Git
+```
