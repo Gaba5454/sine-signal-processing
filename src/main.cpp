@@ -4,8 +4,8 @@
 #include "../include/tests.h"
 int main() {
 
-    const double fs = 100.0;
-    const int num_samples = 50;
+    constexpr double fs = 100.0;
+    constexpr int num_samples = 50;
 
     for (double freq : {2.0, 10.0, 25.0, 33.0, 49.0}) {
     std::string csv_path = "../results/QuantizationNoiseData.csv";

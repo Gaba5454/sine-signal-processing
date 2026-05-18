@@ -2,4 +2,4 @@
 
 #include <iostream>
 
-const double MAXPOINT = 32767.0;
+constexpr double MAXPOINT = 32767.0;
