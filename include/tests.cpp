@@ -114,3 +114,31 @@ void writeResults_allInterpolation_toCsv(const std::string& filepath, double fre
     
     file.close();
 }
+
+
+double test_qualityCubicInterpolation_fixed(double freq, double fs, int num_samples) {
+
+    std::vector<double> signal = sine_generator(freq, fs, num_samples);
+    std::vector<double> signal_ideal = sine_generator(freq, fs * 2, num_samples * 2);
+   
+    std::vector<int16_t> quant_sig = quantization(signal);
+    std::vector<int16_t> quant_sig_ideal = quantization(signal_ideal);
+
+    std::vector<int16_t> inter_sig_quant = cubicSpline_interpolation_fixed_point(quant_sig);
+
+    double error = interpolation_error_fixed_point(quant_sig_ideal, inter_sig_quant);
+    
+    return error;
+}
+
+double test_qualityCubicInterpolation_float(double freq, double fs, int num_samples) {
+
+    std::vector<double> signal = sine_generator(freq, fs, num_samples);
+    std::vector<double> signal_ideal = sine_generator(freq, fs * 2, num_samples * 2);
+
+    std::vector<double> inter_sig = cubicSpline_interpolation_float_point(signal);
+    
+    double error = interpolation_error_float_point(signal_ideal, inter_sig);
+
+    return error;
+}
