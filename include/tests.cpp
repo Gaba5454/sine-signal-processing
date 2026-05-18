@@ -57,7 +57,7 @@ void WriteResultsFloatInterpolationToCsv(const std::string& filepath, double fre
     }
     
     if (file.tellp() == 0) {
-        file << "freq_hz,fs, error\n";  
+        file << "freq_hz,fs,error\n";  
     }
     
     file << freq << "," << fs << "," << error << "\n";
@@ -98,7 +98,7 @@ void WriteResultsIntInterpolationToCsv(const std::string& filepath, double freq,
     }
     
     if (file.tellp() == 0) {
-        file << "freq_hz, fs, error\n";  
+        file << "freq_hz,fs,error\n";  
     }
     
     file << freq << "," << fs << "," << error << "\n";
