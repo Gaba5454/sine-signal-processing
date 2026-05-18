@@ -10,6 +10,6 @@ cmake ..
 make
 
 # Запуск тестов
-./a.out
+./SineSignalProcessing
 
 # Результаты сохраняются в папке results/
