@@ -1,5 +1,6 @@
 #include "interpolation.h"
 #include "const.h"
+
 std::vector<double> linear_interpolation_float_point(const std::vector<double>& signal){
     if (signal.empty()) return {};
 
@@ -34,8 +35,6 @@ std::vector<int16_t> linear_interpolation_fixed_point(const std::vector<int16_t>
 
     return inter_sig;
 }
-
-// добавить ещё парочку методов интерполяции
 
 
 double interpolation_error_float_point(const std::vector<double>& ideal_signal, 
