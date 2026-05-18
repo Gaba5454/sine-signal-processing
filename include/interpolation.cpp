@@ -1,5 +1,5 @@
 #include "interpolation.h"
-
+#include "const.h"
 std::vector<double> linear_interpolation_float_point(const std::vector<double>& signal){
     if (signal.empty()) return {};
 
@@ -69,8 +69,8 @@ double interpolation_error_fixed_point(const std::vector<int16_t>& ideal_quantiz
     double sum_errors = 0.0;
 
     for(size_t i = 0; i < ideal_quantized.size(); ++i){
-        double val_ideal = ideal_quantized[i] / 32767.0;
-        double val_fixed = interpolated_quantized[i] / 32767.0;
+        double val_ideal = ideal_quantized[i] / MAXPOINT;
+        double val_fixed = interpolated_quantized[i] / MAXPOINT;
 
         double tmp = val_ideal - val_fixed;
         sum_errors += tmp * tmp;
