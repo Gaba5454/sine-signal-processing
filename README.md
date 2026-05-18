@@ -18,6 +18,7 @@ make
 --- 
 
 # Структура проекта 
+
 sine-signal-processing/
     src/                       # Исходный код
         main.cpp               # Точка входа, запуск всех тестов
@@ -27,7 +28,6 @@ sine-signal-processing/
         quantization.h/.cpp    # Квантование в int16_t
         interpolation.h/.cpp   # Интерполяция (Linear + Cubic Spline)
         tests.h/.cpp           # Функции для тестирования кода
-
     results/                                # Результаты тестирования (CSV)
         report.md                           # Отчёт о проделанной работе
         QuantizationNoiseData.csv           # Ошибки квантования
