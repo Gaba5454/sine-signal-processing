@@ -12,7 +12,7 @@ std::vector<int16_t> quantization(const std::vector<double>& signal){
         if (clamped < -1.0) clamped = -1.0;
 
         double scaled = clamped * MAXPOINT;
-        quant_sig.push_back(static_cast<int16_t>(round(scaled)));
+        quant_sig.push_back(static_cast<int16_t>(std::round(scaled)));
     }
 
     return quant_sig;
