@@ -62,7 +62,6 @@ void writeResults_floatInterpolation_toCsv(const std::string& filepath, double f
 }
 
 
-
 double test_qualityIterpolation_fixed(double freq, double fs, int num_samples) {
 
     std::vector<double> signal = sine_generator(freq, fs, num_samples);
